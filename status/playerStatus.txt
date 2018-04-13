@@ -1,0 +1,6 @@
+Name:=Player
+HP:500
+MP:0
+LV:1
+ATK:50
+
