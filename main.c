@@ -21,10 +21,22 @@ int display(char *arg);
 void displayEndfight(bool r);
 char inputCommand(void);
 void displayField(void);
+void readcsv(void);
 
 
 target_t player = {500,0,0,48};			//Definition of Player
 target_t rival = {500,0,0,50};			//Definition of target
+
+//Game Messages
+const char Message[6][256]=
+{
+	"Your Attack is missed!!(Because of lesser energy)\n",
+	"Your Attack has Chritical Damage !!!\n",
+	"Your Attack has Guarded...\n",
+	"You charged  your eng.\n",
+	"You guard yourself.\n",
+	"it's bug.\n"
+};
 
 int main(void)
 {
@@ -47,19 +59,19 @@ int main(void)
 			//Attack
 			if(player.eng <= 0)
 			{
-				printf("Your Attack is missed!!(Because of lesser energy)\n");
+				printf("%s",Message[0]);
 			}
 			else 
 			{
 				if(rival.cmd != COM_DEF)
 				{
-					printf("Your Attack has Chritical Damage !!!\n");
+					printf("%s",Message[1]);
 					rival.hp -= (player.atk+(rand() % 65536)/8192);
 					
 				}
 				else
 				{
-					printf("Your Attack has Guarded...\n");
+					printf("%s",Message[2]);
 					rival.hp -= 0;
 				}
 				player.eng--;
@@ -68,15 +80,15 @@ int main(void)
 			break;
 		case COM_CHR:
 			//Charge
-			printf("You charged  your eng.");
+			printf("%s",Message[3]);
 			player.eng++;
 			break;
 		case COM_DEF:
 			//Guard
-			printf("You guard yourself.");
+			printf("%s",Message[4]);
 			break;
 		default:
-			printf("it's bug.\n");
+			printf("%s",Message[5]);
 			break;
 		}
 
@@ -106,7 +118,7 @@ int main(void)
 			//Guard
 			break;
 		default:
-			printf("it's bug.\n");
+			printf("%s",Message[5]);
 			break;
 		}
 		
