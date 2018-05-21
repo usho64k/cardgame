@@ -1,0 +1,35 @@
+ñºèÃïsñæ
+Seeds of Card
+Charge...Charging the "Power"
+Attack...Attacking to Enemy with "Power"
+Guard...Defencing from Enemy attack. Using this, you don't need the any "Power"
+?????
+?????
+?????
+
+Decky
+You can have 40 cards included "Charge", "Attack", and "Guard" Card.
+You choice the card amounts.  
+For example, I choose 15 Charges, 12 Attacks, and 13 Guards.
+
+Making Game for C language.
+
+C...?
+
+int main(void)
+{
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
