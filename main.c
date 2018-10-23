@@ -2,7 +2,6 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <time.h>
-#include "gsystem.h"
 
 #define	COM_ATK		0
 #define	COM_CHR		1

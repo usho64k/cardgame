@@ -100,20 +100,22 @@ unsigned int calcEffect(unsigned int Length,double multip)
 
 }
 
-void main(void)
+void main(int argc,char argv[])
 {
 	//touch point
 	S_point player;
 	S_point computer;
-	computer.x = 0;
-	computer.y = 0;
+	unsigned int cpx, cpy, atk;
+	cpx = 0; cpy = 0; atk = 100;
+	computer.x = cpx;
+	computer.y = cpy;
 
 	//Field
 	field.width = 150;
 	field.height = 150;
 
 	//Effect
-	effect.base = 100;
+	effect.base = atk;
 	effect.minMultip = 0.85;
 	effect.maxMultip = 1.15;
 
