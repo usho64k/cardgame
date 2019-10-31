@@ -9,7 +9,8 @@
 #define	COM_DEF		2
 #define COM_PWG		3
 
-typedef struct{
+typedef struct
+{
 	int hp;			//Hit Points
 	int eng;		//Energy
 	int cmd;		//Command
